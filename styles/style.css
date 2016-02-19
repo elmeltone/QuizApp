@@ -1,0 +1,17 @@
+
+.lamp {
+	max-height: 80px;
+}
+
+#quiz {
+	background-image: url("images/hockey-background-1920x1200.jpg");
+}
+
+#scoreboard {
+	list-style-type: none;
+}
+
+.genos {
+	display: inline-block;
+	max-height: 50px;
+}
