@@ -53,7 +53,7 @@ ul {
 #subtitle {
 	margin-top: 1em;
 	font-family: 'Lora', serif;
-	font-size: 30px;
+	font-size: 40px;
 }
 
 .celly {
@@ -78,11 +78,11 @@ ul {
 
 .answers {
 	margin-left: 30%;
-	font-size: 30px;
+	font-size: 24px;
 	font-family: 'Lora', serif;
 }
 
-========== SCORE SECTION ==========
+========== SCOREBOARD SECTION ==========
 
 #footer {
 	
@@ -95,8 +95,14 @@ ul {
 }
 
 #scoreboard {
+	width: 100%;
+	margin-top: 1.5em;
 	list-style-type: none;
 	margin-left: 15%;
+}
+
+#sig {
+	width: 35px;
 }
 
 .genos {
