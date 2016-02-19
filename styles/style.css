@@ -2,35 +2,55 @@ body {
 	background-image: url("http://i.imgur.com/usetx3r.png");
 	background-size: auto;
 	background-position: center top;
-	color: red;
+	color: darkred;
+	font-family: 'Graduate', cursive;
+	font-weight: bolder;
 }
 
 ========== NAV BAR ==========
 
 nav {
-	width: 100%;
-	max-height: 300px;
-	text-align: center;
+	height: 300px;
 }
 
-#masthead {
-	max-height: 225px;
-	max-width: 25%;
-	margin: 0px;
-	padding: 0px;
-	
+ul {
+	list-style-type: none;
+	display: table;
+	width: 100%;
+}
+
+.masthead {
+	text-align: center;
+	float: left;
+	width: 30%;
+	margin: auto;
+	padding: auto;
+	font-size: 48px;
+}
+
+#title {
+	margin-top: -1em;
+	padding-top: 0;
+}
+
+#subtitle {
+	margin-top: -1em;
+	font-family: 'Lora', serif;
+	font-size: 30px;
 }
 
 .celly {
-	max-height: 225px;
-	max-width: 25%;
+	height: 225px;
+	width: auto;
 	margin: 0px;
 	padding: 0px;
+	display: inline-block;
 }
 
 ========== QUIZ SECTION ==========
 
 #quiz {
+	width: 100%;
 }
 
 ========== SCORE SECTION ==========
