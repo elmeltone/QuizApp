@@ -7,33 +7,44 @@
   <link rel="stylesheet" href="styles/style.css">
   <link rel="javascript" href="js/app.js">
   <link href='https://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora:700italic' rel='stylesheet' type='text/css'>
 </head>
 <body id="ice">
 	<nav>
-		<ul>
+		<ul id="top-list">
 			<li class="masthead"><img class="celly" src="images/toffoli-celly.png" alt="lamp"></li>
 			<li id="title" class="masthead">
-				<h1>&iexcl;HOCKEY!</h1>
-				<p id="subtitle">Trivia Quiz</p>
+				<div id="title-box">
+					<h1>&iexcl;HOCKEY!</h1>
+					<p id="subtitle">Trivia Quiz</p>
+				</div>
 			</li>
 			<li class="masthead"><img class="celly" src="images/subban-celly.png" alt="lamp"></li>
 		</ul>
 	</nav>
-	<section id="quiz">
-		<p>
-			Lorem ipsum dolor sit amet, aenean venenatis justo, enim proin nibh vehicula. Tempor lorem volutpat sapien nibh velit, lobortis ut eu nec ornare viverra pellentesque. Mi lorem at. Ante rem mauris. Non wisi feugiat, condimentum interdum, adipiscing viverra aliquam malesuada id, fames dui venenatis lorem etiam in, neque habitasse mi nec nibh orci. Augue rutrum vitae risus et ac. Tellus mauris mus tellus est amet elit, nullam sit dui, leo vestibulum porttitor, aliquam elit et orci non, elit leo lobortis nulla etiam. Eros sed proin aenean, nisl autem porttitor, velit adipiscing morbi nulla sapien augue, scelerisque velit eros est tempor volutpat, porta nulla officiis pellentesque senectus. Feugiat sem luctus massa, donec porttitor turpis ullamcorper eu eget, nam egestas dolor dictum convallis, urna rutrum ipsum consectetuer, wisi purus nulla in vel. Justo condimentum vitae ultricies nascetur ante per.
-		</p>
-		
-	</section>
 	<section>
-		<a id="score">SCORE:</a>
+		<div  id="quiz">
+			<p class="question">
+			1. Which of these are not commonly thrown on the ice by hockey fans in at least one city with an NHL team?
+			</p>
+			<ul class="answers">
+				<li><input type="checkbox" id="cbox1" value="checkbox1">  A)   RATS</li>
+				<li><input type="checkbox" id="cbox2" value="checkbox2">  B)   OCTOPUS</li>
+				<li><input type="checkbox" id="cbox3" value="checkbox3">  C)   PUCKS</li>
+				<li><input type="checkbox" id="cbox4" value="checkbox4">  D)   HATS</li>
+			</ul>
+		</div>
+	</section>
+	<section id="footer">
 		<ul id="scoreboard">
+			<li class="genos"><a id="score">SCORE:</a></li>
 			<li class="genos"><img class="icon" src="images/lamp.gif" alt="lamp"></li>
 			<li class="genos"><img class="icon" src="images/no-goal.gif" alt="lamp"></li>
 			<li class="genos"><img class="icon" src="images/lamp.gif" alt="lamp"></li>
 			<li class="genos"><img class="icon" src="images/lamp.gif" alt="lamp"></li>
 			<li class="genos"><img class="icon" src="images/lamp.gif" alt="lamp"></li>
 			<li class="genos"><img class="icon" src="images/no-goal.gif" alt="lamp"></li>
+		</ul>
 	</section>
 
   <script src="http://code.jquery.com/jquery.min.js"></script>
