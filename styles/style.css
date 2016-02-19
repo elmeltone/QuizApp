@@ -1,10 +1,16 @@
+body {
+	background-image: url("http://i.imgur.com/usetx3r.png");
+}
+
+nav {
+	display: inline-block;
+}
 
 .lamp {
 	max-height: 80px;
 }
 
 #quiz {
-	background-image: url("images/hockey-background-1920x1200.jpg");
 }
 
 #scoreboard {
@@ -13,5 +19,9 @@
 
 .genos {
 	display: inline-block;
+	text-align: middle;
+}
+
+.icon {
 	max-height: 50px;
 }
