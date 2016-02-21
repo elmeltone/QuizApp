@@ -97,7 +97,8 @@ nav {
 }
 
 .answers {
-	margin-left: 40%;
+	list-style-type: none;
+	margin-left: 20%;
 	font-size: 24px;
 	font-family: 'Lora', serif;
 }
@@ -105,7 +106,21 @@ nav {
 /*========== SCOREBOARD SECTION ==========*/
 
 #footer {
-	
+	float: right;
+	padding: 0;
+	position: relative;
+	left: -50%;
+	margin: 1em auto 1em auto;
+}
+
+#footer ul {
+	list-style-type: none;
+	width: 100%;
+	margin: 0 auto 0 auto;
+	padding: 0;
+	position: relative;
+	left: 50%;
+	width: 100%;
 }
 
 #score {
@@ -131,23 +146,39 @@ nav {
 
 #sig {
 	width: 35px;
-	margin-top: 2em;
+	margin-top: 4em;
 }
 
 /*========== RESPONSIVE ==========*/
 
-@media screen and (max-width: 915px) and (min-width: 701px) {
+@media screen and (min-width: 701px) and (max-width: 925px) {
 	nav {
 		height: 175px;
 	}
 	.masthead {
 		font-size: 45px;
-	};
-	#subtitle {
-		font-size: 20px;
-	};
+	}
 	.celly {
-		height: 2em;
+		height: 2.5em;
 		width: auto;
-	};
-};
+	}
+}
+
+@media screen and (min-width: 350px) and (max-width: 700px) {
+	nav {
+		height: 105px;
+	}
+	.masthead {
+		font-size: 25px;
+	}
+	#quiz {
+		font-size: 24px;
+	}
+	.answers, #scoreboard {
+		font-size: 20px;
+	}
+	.celly {
+		height: 2.5em;
+		width: auto;
+	}
+}
