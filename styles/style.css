@@ -2,6 +2,8 @@ body {
 	background-image: url("http://i.imgur.com/usetx3r.png");
 	background-size: auto;
 	background-position: center top;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 	color: darkred;
 	font-family: 'Graduate', cursive;
 	font-weight: bolder;
@@ -12,7 +14,7 @@ h1 {
 	margin: 5px;
 }
 
-========== NAV BAR ==========
+/*========== NAV BAR ==========*/
 
 nav {
 	height: 300px;
@@ -65,7 +67,7 @@ ul {
 	display: inline-block;
 }
 
-========== QUIZ SECTION ==========
+/*========== QUIZ SECTION ==========*/
 
 #quiz {
 	width: 100%;
@@ -83,7 +85,7 @@ ul {
 	font-family: 'Lora', serif;
 }
 
-========== SCOREBOARD SECTION ==========
+/*========== SCOREBOARD SECTION ==========*/
 
 #footer {
 	
