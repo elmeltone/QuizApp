@@ -17,28 +17,45 @@ h1 {
 /*========== NAV BAR ==========*/
 
 nav {
-	height: 300px;
+	height: 225px;
 }
 
-ul {
-	list-style-type: none;
-	display: table;
-	width: 100%;
-	margin-left: none;
-	margin-right: none;
+#top-div {
+	float: right;
 	padding: 0;
+	position: relative;
+	left: -50%;
+	margin: 0 auto 0 auto;
+}
+
+#top-div ul {
+	list-style-type: none;
+	width: 100%;
+	margin: 0 auto 0 auto;
+	padding: 0;
+	position: relative;
+	left: 50%;
+	width: 100%;
+}
+
+#top-list {
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
 }
 
 .masthead {
 	text-align: center;
 	float: left;
-	width: 30%;
-	margin: 5px;
+	width: auto;
+	margin: 1px;
 	font-size: 60px;
 	overflow: none;
 	text-decoration: underline;
 	border: 1px;
 	border-color: red;
+	padding: 0;
 }
 
 #title-box {
@@ -54,9 +71,8 @@ ul {
 }
 
 #subtitle {
-	margin-top: 1em;
+	margin-top: 0;
 	font-family: 'Lora', serif;
-	font-size: 40px;
 }
 
 .celly {
@@ -70,7 +86,8 @@ ul {
 /*========== QUIZ SECTION ==========*/
 
 #quiz {
-	width: 100%;
+	width: 80%;
+	max-width: 950px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -116,3 +133,21 @@ ul {
 	width: 35px;
 	margin-top: 2em;
 }
+
+/*========== RESPONSIVE ==========*/
+
+@media screen and (max-width: 915px) and (min-width: 701px) {
+	nav {
+		height: 175px;
+	}
+	.masthead {
+		font-size: 45px;
+	};
+	#subtitle {
+		font-size: 20px;
+	};
+	.celly {
+		height: 2em;
+		width: auto;
+	};
+};
