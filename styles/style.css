@@ -85,6 +85,10 @@ nav {
 
 /*========== QUIZ SECTION ==========*/
 
+input {
+	vertical-align: middle;
+}
+
 #quiz {
 	width: 80%;
 	max-width: 950px;
@@ -103,7 +107,7 @@ nav {
 	font-family: 'Lora', serif;
 }
 
-#next {
+.next {
 	background-color: darkred;
 	color: white;
 	margin: 0 0 0 25px;
@@ -114,34 +118,37 @@ nav {
 /*========== SCOREBOARD SECTION ==========*/
 
 #footer {
-	float: right;
 	padding: 0;
-	position: relative;
-	left: -50%;
-	margin: 1em auto 1em auto;
+	/*position: relative;
+	left: -50%;*/
+	/*margin: 1em auto 1em auto;*/
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 #footer ul {
 	list-style-type: none;
 	width: 100%;
-	margin: 0 auto 0 auto;
+	/*margin: 0 auto 0 auto;*/
 	padding: 0;
-	position: relative;
-	left: 50%;
-	width: 100%;
+	/*position: relative;
+	left: 50%;*/
 }
 
 #score {
+	text-align: center;
+	display: block;
 	margin-top: 1em;
-	margin-right: 1em;
+	/*margin-right: 1em;*/
 	padding-bottom: 5px;
 }
 
 #scoreboard {
 	width: 100%;
 	margin-top: 1.5em;
+	text-align: center;
 	list-style-type: none;
-	margin-left: 30%;
 }
 
 .genos {
