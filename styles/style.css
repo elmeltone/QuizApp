@@ -89,6 +89,10 @@ input {
 	vertical-align: middle;
 }
 
+#center {
+	text-align: center;
+}
+
 #quiz {
 	width: 80%;
 	max-width: 950px;
@@ -107,10 +111,16 @@ input {
 	font-family: 'Lora', serif;
 }
 
+#idBox {
+	width: 100%;
+	text-align: center;
+}
+
 .next {
+	margin-left: 25%;
+	margin-right: 25%;
 	background-color: darkred;
 	color: white;
-	margin: 0 0 0 25px;
 	border: 0;
 	border-radius: 10px;
 }
