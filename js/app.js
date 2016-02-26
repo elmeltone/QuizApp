@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	console.log("ready");
 	
+//QUIZ QUESTIONS
 	var questions = [
 		{"question":"READY?"},
 		{"question":"1. Which of these things are not commonly thrown on the ice by hockey fans in at least one city with an NHL team?",
@@ -20,8 +21,11 @@ $(document).ready(function(){
 			"correct":"2"}
 	];
 
-	var geno = 0;
+//VARIABLES
+	var firstQuestion = '<span class="question">'+questions[0].question+'</span><br>';
+	var currentQuestion = 1;
+	var nextQuestion = '<span classs="question">'+questions[currentQuestion].question+'</span><br><div class="choices"><input type="checkbox" value="0"><span>'+questions[currentQuestion].options[0]+'</span><br><input type="checkbox" value="0"><span>'+questions[currentQuestion].options[1]+'</span><br><input type="checkbox" value="0"><span>'+questions[currentQuestion].options[2]+'</span><br><input type="checkbox" value="0"><span>'+questions[currentQuestion].options[3]+'</span><br></div>';
 	
-	
+	$('#quiz').html(firstQuestion);
 
 });
