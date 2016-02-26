@@ -26,6 +26,14 @@ $(document).ready(function(){
 	var currentQuestion = 1;
 	var nextQuestion = '<span classs="question">'+questions[currentQuestion].question+'</span><br><div class="choices"><input type="checkbox" value="0"><span>'+questions[currentQuestion].options[0]+'</span><br><input type="checkbox" value="0"><span>'+questions[currentQuestion].options[1]+'</span><br><input type="checkbox" value="0"><span>'+questions[currentQuestion].options[2]+'</span><br><input type="checkbox" value="0"><span>'+questions[currentQuestion].options[3]+'</span><br></div>';
 	
+//START PAGE
 	$('#quiz').html(firstQuestion);
+	
+//EVENTS
+	currentQuestion = questions[1];
+	$('.next').on('click',(function newQuestion(event) {
+		$('.quiz').empty().html(nextQuestion);
+		
+	}));
 
 });

@@ -121,12 +121,19 @@ input {
 }
 
 .next {
+	margin-top: 4em;
 	margin-left: 25%;
 	margin-right: 25%;
 	background-color: darkred;
 	color: white;
 	border: 0;
 	border-radius: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  text-shadow: 2px 2px 2px #000;
+
 }
 
 /*========== SCOREBOARD SECTION ==========*/
