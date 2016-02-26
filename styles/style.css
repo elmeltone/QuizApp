@@ -98,7 +98,6 @@ input {
 	max-width: 950px;
 	margin-left: auto;
 	margin-right: auto;
-	text-align: center;
 }
 
 .question {
@@ -108,11 +107,12 @@ input {
 	margin-right: 25%;
 }
 
-.answers {
-	list-style-type: none;
-	margin-left: 20%;
+.choices {
+	margin-left: 35%;
+	margin-top: 1em;
 	font-size: 24px;
 	font-family: 'Lora', serif;
+	text-align: left;
 }
 
 #idBox {
@@ -133,7 +133,10 @@ input {
 button:hover {
   cursor: pointer;
   text-shadow: 2px 2px 2px #000;
+}
 
+button:focus {
+	outline: none;
 }
 
 /*========== SCOREBOARD SECTION ==========*/
@@ -210,8 +213,9 @@ button:hover {
 	#quiz {
 		font-size: 24px;
 	}
-	.answers, #scoreboard {
+	.choices, #scoreboard {
 		font-size: 20px;
+		margin-left: 20%;
 	}
 	.celly {
 		height: 2.75em;
@@ -229,8 +233,9 @@ button:hover {
 	#quiz {
 		font-size: 24px;
 	}
-	.answers, #scoreboard {
+	.choices, #scoreboard {
 		font-size: 20px;
+		margin-left: 20%;
 	}
 	.celly {
 		height: 2em;

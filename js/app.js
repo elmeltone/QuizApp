@@ -32,7 +32,7 @@ $(document).ready(function(){
 //EVENTS
 	currentQuestion = questions[1];
 	$('.next').on('click',(function newQuestion(event) {
-		$('.quiz').empty().html(nextQuestion);
+		$('#quiz').empty().html(nextQuestion);
 		
 	}));
 
