@@ -207,6 +207,10 @@ button:focus {
 	nav {
 		height: 105px;
 	}
+	.celly {
+		height: 2.75em;
+		width: auto;
+	}
 	.masthead {
 		font-size: 25px;
 	}
@@ -217,9 +221,8 @@ button:focus {
 		font-size: 20px;
 		margin-left: 20%;
 	}
-	.celly {
-		height: 2.75em;
-		width: auto;
+	#footer {
+		font-size: 20px;
 	}
 }
 
@@ -241,8 +244,8 @@ button:focus {
 		height: 2em;
 		width: auto;
 	}
-	.answers {
-		margin-left: 10%;
+	#footer {
+		font-size: 20px;
 	}
 	.icon {
 		max-height: 35px;

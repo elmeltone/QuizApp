@@ -23,16 +23,19 @@ $(document).ready(function(){
 
 //VARIABLES
 	var firstQuestion = '<span class="question">'+questions[0].question+'</span><br>';
-	var currentQuestion = 1;
-	var nextQuestion = '<span classs="question">'+questions[currentQuestion].question+'</span><br><div class="choices"><input type="checkbox" value="0"><span>'+questions[currentQuestion].options[0]+'</span><br><input type="checkbox" value="0"><span>'+questions[currentQuestion].options[1]+'</span><br><input type="checkbox" value="0"><span>'+questions[currentQuestion].options[2]+'</span><br><input type="checkbox" value="0"><span>'+questions[currentQuestion].options[3]+'</span><br></div>';
+	var currentQuestion = 0;
+	function nextQuestion(index) {
+		var question = questions[index];
+		return '<span classs="question">'+question.question+'</span><br><div class="choices"><input type="checkbox" value="0"><span>'+question.options[0]+'</span><br><input type="checkbox" value="0"><span>'+question.options[1]+'</span><br><input type="checkbox" value="0"><span>'+question.options[2]+'</span><br><input type="checkbox" value="0"><span>'+question.options[3]+'</span><br></div>';
+	};
 	
 //START PAGE
 	$('#quiz').html(firstQuestion);
 	
 //EVENTS
-	currentQuestion = questions[1];
 	$('.next').on('click',(function newQuestion(event) {
-		$('#quiz').empty().html(nextQuestion);
+		currentQuestion = currentQuestion + 1;
+		$('#quiz').empty().html(nextQuestion(currentQuestion));
 		
 	}));
 
