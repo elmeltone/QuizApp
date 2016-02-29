@@ -35,8 +35,11 @@ $(document).ready(function(){
 //EVENTS
 	$('.next').on('click',(function newQuestion(event) {
 		currentQuestion = currentQuestion + 1;
-		$('#quiz').empty().html(nextQuestion(currentQuestion));
-		
-	}));
+		if (currentQuestion < 6)
+			$('#quiz').empty().html(nextQuestion(currentQuestion));
+		else if (currentQuestion == 6)
+			$('#quiz').empty().html('<span classs="question">'+'Thanks for playing!'+'<br>'+'Click "next" to start over'+'</span><br>');
+		else $('#quiz').html(firstQuestion);
+		}));
 
 });
