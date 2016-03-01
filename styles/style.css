@@ -107,12 +107,18 @@ input {
 	margin-right: 25%;
 }
 
-.choices {
-	margin-left: 35%;
+.choices button {
+	background-color: darkred;
+	color: white;
+	border: 0;
+	border-radius: 10px;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 1em;
 	font-size: 24px;
 	font-family: 'Lora', serif;
-	text-align: left;
+	text-align: center;
 }
 
 #idBox {
@@ -217,7 +223,7 @@ button:focus {
 	#quiz {
 		font-size: 24px;
 	}
-	.choices, #scoreboard {
+	.choices button, #scoreboard {
 		font-size: 20px;
 		margin-left: 20%;
 	}
@@ -236,7 +242,7 @@ button:focus {
 	#quiz {
 		font-size: 24px;
 	}
-	.choices, #scoreboard {
+	.choices button, #scoreboard {
 		font-size: 20px;
 		margin-left: 20%;
 	}

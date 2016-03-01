@@ -22,11 +22,11 @@ $(document).ready(function(){
 	];
 
 //VARIABLES
-	var firstQuestion = '<span class="question">'+questions[0].question+'</span><br>';
+	var firstQuestion = '<span class="question">'+questions[0].question+'</span><br><div id="idBox"><button class="next" type="button">'+'NEXT --->'+'</button></div>';
 	var currentQuestion = 0;
 	function nextQuestion(index) {
 		var question = questions[index];
-		return '<span classs="question">'+question.question+'</span><br><div class="choices"><input type="checkbox" value="0"><span>'+question.options[0]+'</span><br><input type="checkbox" value="1"><span>'+question.options[1]+'</span><br><input type="checkbox" value="2"><span>'+question.options[2]+'</span><br><input type="checkbox" value="3"><span>'+question.options[3]+'</span><br></div>';
+		return '<span classs="question">'+question.question+'</span><br><div class="choices"><span><button class="answer" value="0">'+question.options[0]+'</button></span><br><span><button class="answer" value="1">'+question.options[1]+'</button></span><br><span><button class="answer" value="2">'+question.options[2]+'</button></span><br><span><button class="answer" value="3">'+question.options[3]+'</button></span><br></div>';
 	};
 	
 //START PAGE
