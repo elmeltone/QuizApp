@@ -7,7 +7,7 @@ $(document).ready(function(){
 		{"question":"1. Which of these things are not commonly thrown on the ice by hockey fans in at least one city with an NHL team?",
 			"options":["Rats", "Octopi", "Pucks", "Hats"],
 			"correct":"2"},
-		{"question":"2. As of March 2016, only 3 teams have won the title during the last 5 Stanley Cup Championshps. Which of the following teams is not one of them?",
+		{"question":"2. As of March 2016, only 3 teams have won the title over the last 5 Stanley Cup Championshps. Which of the following teams is not one of them?",
 			"options":["Los Angeles Kings", "Boston Bruins", "Chicago Blackhawks", "Pittsburgh Penguins"],
 			"correct":"3"},
 		{"question":'3. Which hockey player is referred to as "The Great One"?',
@@ -26,7 +26,7 @@ $(document).ready(function(){
 	var currentQuestion = 0;
 	function nextQuestion(index) {
 		var question = questions[index];
-		return '<span classs="question">'+question.question+'</span><br><div class="choices"><input type="checkbox" value="0"><span>'+question.options[0]+'</span><br><input type="checkbox" value="0"><span>'+question.options[1]+'</span><br><input type="checkbox" value="0"><span>'+question.options[2]+'</span><br><input type="checkbox" value="0"><span>'+question.options[3]+'</span><br></div>';
+		return '<span classs="question">'+question.question+'</span><br><div class="choices"><input type="checkbox" value="0"><span>'+question.options[0]+'</span><br><input type="checkbox" value="1"><span>'+question.options[1]+'</span><br><input type="checkbox" value="2"><span>'+question.options[2]+'</span><br><input type="checkbox" value="3"><span>'+question.options[3]+'</span><br></div>';
 	};
 	
 //START PAGE
@@ -40,6 +40,14 @@ $(document).ready(function(){
 		else if (currentQuestion == 6)
 			$('#quiz').empty().html('<span classs="question">'+'Thanks for playing!'+'<br>'+'Click "next" to start over'+'</span><br>');
 		else $('#quiz').html(firstQuestion);
+		
+	// ***NEED TO RESET currentQuestion VARIABLE TO '0' ON QUIZ RESTART***
+		
+		/*var answer = $('input[type="checkbox"]:checked').val();
+		if (answer == questions[currentQuestion].correct) {
+			console.log('correct');
+		}*/
+		
 		}));
 
 });
