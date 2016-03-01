@@ -33,20 +33,21 @@ $(document).ready(function(){
 	$('#quiz').html(firstQuestion);
 	
 //EVENTS
-	$('.next').on('click',(function newQuestion(event) {
+	$('.next, .answer').on('click',(function newQuestion(event) {
 		currentQuestion = currentQuestion + 1;
 		if (currentQuestion < 6)
 			$('#quiz').empty().html(nextQuestion(currentQuestion));
 		else if (currentQuestion == 6)
 			$('#quiz').empty().html('<span classs="question">'+'Thanks for playing!'+'<br>'+'Click "next" to start over'+'</span><br>');
-		else $('#quiz').html(firstQuestion);
+		else {
+			$('#quiz').html(firstQuestion)
+			currentQuestion = 0;
+		};
 		
-	// ***NEED TO RESET currentQuestion VARIABLE TO '0' ON QUIZ RESTART***
-		
-		/*var answer = $('input[type="checkbox"]:checked').val();
+		var answer = $('input[type="checkbox"]:checked').val();
 		if (answer == questions[currentQuestion].correct) {
 			console.log('correct');
-		}*/
+		};
 		
 		}));
 
