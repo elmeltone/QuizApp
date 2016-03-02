@@ -150,7 +150,7 @@ button:focus {
 /*========== SCOREBOARD SECTION ==========*/
 
 #footer {
-	padding: 0;
+	padding: 0.5em;
 	/*position: relative;
 	left: -50%;*/
 	/*margin: 1em auto 1em auto;*/
@@ -198,7 +198,7 @@ button:focus {
 
 /*========== RESPONSIVE ==========*/
 
-@media screen and (min-width: 701px) and (max-width: 999px) {
+@media screen and (min-width: 716px) and (max-width: 1024px) {
 	nav {
 		height: 175px;
 	}
@@ -211,7 +211,7 @@ button:focus {
 	}
 }
 
-@media screen and (min-width: 401px) and (max-width: 700px) {
+@media screen and (min-width: 440px) and (max-width: 715px) {
 	nav {
 		height: 105px;
 	}
@@ -227,14 +227,13 @@ button:focus {
 	}
 	.choices button, #scoreboard {
 		font-size: 20px;
-		margin-left: 20%;
 	}
 	#footer {
 		font-size: 20px;
 	}
 }
 
-@media screen and (min-width: 1px) and (max-width: 400px) {
+@media screen and (min-width: 1px) and (max-width: 439px) {
 	nav {
 		height: 105px;
 	}
@@ -246,7 +245,6 @@ button:focus {
 	}
 	.choices button, #scoreboard {
 		font-size: 20px;
-		margin-left: 20%;
 	}
 	.celly {
 		height: 2em;
