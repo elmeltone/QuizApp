@@ -35,6 +35,14 @@ $(document).ready(function(){
 //EVENTS
 	$('.answer').on('click',(function newQuestion(event) {
 		currentQuestion = currentQuestion + 1;
+		var answer = $(this).attr('value');
+		
+		if (answer == questions[currentQuestion].correct) {
+			console.log('correct');
+		} else {
+			console.log('incorrect');
+		};
+		
 		if (currentQuestion < 6)
 			$('#quiz').empty().html(nextQuestion(currentQuestion));
 		else if (currentQuestion == 6)
@@ -44,11 +52,16 @@ $(document).ready(function(){
 			currentQuestion = 0;
 		};
 		
-		var answer = $('input[type="checkbox"]:checked').val();
+		
+	/*$('.answer').on('click',(function getAnswer() {	
+		var answer = $(this).attr('value');
 		if (answer == questions[currentQuestion].correct) {
 			console.log('correct');
+		} else {
+			console.log('incorrect');
 		};
-		
-		}));
+		}));*/
+
+}));
 
 });
