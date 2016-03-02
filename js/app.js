@@ -22,7 +22,7 @@ $(document).ready(function(){
 	];
 
 //VARIABLES
-	var firstQuestion = '<span class="question">'+questions[0].question+'</span><br><div id="idBox"><button class="next" type="button">'+'NEXT --->'+'</button></div>';
+	var firstQuestion = '<span class="question">'+questions[0].question+'</span><br><div id="idBox"><button class="answer" type="button" value="null">'+'NEXT --->'+'</button></div>';
 	var currentQuestion = 0;
 	function nextQuestion(index) {
 		var question = questions[index];
@@ -33,7 +33,7 @@ $(document).ready(function(){
 	$('#quiz').html(firstQuestion);
 	
 //EVENTS
-	$('.next, .answer').on('click',(function newQuestion(event) {
+	$('.answer').on('click',(function newQuestion(event) {
 		currentQuestion = currentQuestion + 1;
 		if (currentQuestion < 6)
 			$('#quiz').empty().html(nextQuestion(currentQuestion));
