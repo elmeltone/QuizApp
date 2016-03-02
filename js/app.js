@@ -22,46 +22,43 @@ $(document).ready(function(){
 	];
 
 //VARIABLES
-	var firstQuestion = '<span class="question">'+questions[0].question+'</span><br><div id="idBox"><button class="answer" type="button" value="null">'+'NEXT --->'+'</button></div>';
+	var firstQuestion = '<span class="question">'+questions[0].question+'</span><br><div id="idBox"><button class="next" type="button" value="null">'+'NEXT --->'+'</button></div>';
 	var currentQuestion = 0;
-	function nextQuestion(index) {
+	function printQuestion(index) {
 		var question = questions[index];
 		return '<span classs="question">'+question.question+'</span><br><div class="choices"><span><button class="answer" value="0">'+question.options[0]+'</button></span><br><span><button class="answer" value="1">'+question.options[1]+'</button></span><br><span><button class="answer" value="2">'+question.options[2]+'</button></span><br><span><button class="answer" value="3">'+question.options[3]+'</button></span><br></div>';
 	};
+	function nextQuestion() {
+		currentQuestion = currentQuestion + 1;
+		if (currentQuestion < 6)
+			$('#quiz').empty().html(printQuestion(currentQuestion));
+		else if (currentQuestion == 6)
+			$('#quiz').empty().html('<span class="question">'+'Thanks for playing!'+'<br>'+'Click "next" to start over'+'</span><br>');
+		else {
+			$('#quiz').html(firstQuestion)
+			currentQuestion = 0;
+		}
+	}
 	
 //START PAGE
 	$('#quiz').html(firstQuestion);
 	
 //EVENTS
-	$('.answer').on('click',(function newQuestion(event) {
-		currentQuestion = currentQuestion + 1;
-		var answer = $(this).attr('value');
-		
-		if (answer == questions[currentQuestion].correct) {
-			console.log('correct');
-		} else {
-			console.log('incorrect');
-		};
-		
-		if (currentQuestion < 6)
-			$('#quiz').empty().html(nextQuestion(currentQuestion));
-		else if (currentQuestion == 6)
-			$('#quiz').empty().html('<span classs="question">'+'Thanks for playing!'+'<br>'+'Click "next" to start over'+'</span><br>');
-		else {
-			$('#quiz').html(firstQuestion)
-			currentQuestion = 0;
-		};
-		
-		
-	/*$('.answer').on('click',(function getAnswer() {	
+	$('.answer').on('click',(function(e) {	
 		var answer = $(this).attr('value');
 		if (answer == questions[currentQuestion].correct) {
 			console.log('correct');
 		} else {
 			console.log('incorrect');
 		};
-		}));*/
+		nextQuestion();
+		}));
+		
+	$('.next').on('click',(function(){
+		nextQuestion();
+		}));
+		
+		
 
-}));
 
 });
