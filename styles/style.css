@@ -18,6 +18,7 @@ h1 {
 
 nav {
 	height: 225px;
+	text-align: center;
 }
 
 #top-div {
@@ -31,7 +32,7 @@ nav {
 #top-div ul {
 	list-style-type: none;
 	width: 100%;
-	margin: 0 auto 0 auto;
+	margin-left: 0;
 	padding: 0;
 	position: relative;
 	left: 50%;
@@ -65,8 +66,8 @@ nav {
 }
 
 #title {
-	margin-top: -1em 0.5em 0 0.5em;
-	padding: 0 0 auto 0;
+	margin: -0.5em 0.5em 0 0.5em;
+	padding: 0;
 	width: auto;
 }
 
@@ -136,7 +137,8 @@ input {
 	border-radius: 10px;
 }
 
-button:hover {
+button:hover {;
+  box-shadow: 2px 2px 2px #000;
   cursor: pointer;
   text-shadow: 2px 2px 2px #000;
 }
@@ -196,7 +198,7 @@ button:focus {
 
 /*========== RESPONSIVE ==========*/
 
-@media screen and (min-width: 701px) and (max-width: 925px) {
+@media screen and (min-width: 701px) and (max-width: 999px) {
 	nav {
 		height: 175px;
 	}
