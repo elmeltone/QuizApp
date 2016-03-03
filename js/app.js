@@ -24,10 +24,12 @@ $(document).ready(function(){
 //VARIABLES
 	var firstQuestion = '<span class="question">'+questions[0].question+'</span><br><div id="idBox"><button class="next" type="button" value="null">'+'NEXT --->'+'</button></div>';
 	var currentQuestion = 0;
+	
 	function printQuestion(index) {
 		var question = questions[index];
 		return '<span classs="question">'+question.question+'</span><br><div class="choices"><span><button class="answer" value="0">'+question.options[0]+'</button></span><br><span><button class="answer" value="1">'+question.options[1]+'</button></span><br><span><button class="answer" value="2">'+question.options[2]+'</button></span><br><span><button class="answer" value="3">'+question.options[3]+'</button></span><br></div>';
-	};
+		};
+	
 	function nextQuestion() {
 		currentQuestion = currentQuestion + 1;
 		if (currentQuestion < 6)
@@ -37,14 +39,10 @@ $(document).ready(function(){
 		else {
 			$('#quiz').html(firstQuestion)
 			currentQuestion = 0;
-		}
-	}
+			};
+		};
 	
-//START PAGE
-	$('#quiz').html(firstQuestion);
-	
-//EVENTS
-	$('.answer').on('click',(function(e) {	
+	function getAnswer() {	
 		var answer = $(this).attr('value');
 		if (answer == questions[currentQuestion].correct) {
 			console.log('correct');
@@ -52,10 +50,18 @@ $(document).ready(function(){
 			console.log('incorrect');
 		};
 		nextQuestion();
-		}));
-		
+		};
+	
+//START PAGE
+	$('#quiz').html(firstQuestion);
+	
+//EVENTS
 	$('.next').on('click',(function(){
 		nextQuestion();
+		}));
+		
+	$('.answer').on('click',(function(){
+		getAnswer();
 		}));
 		
 		
