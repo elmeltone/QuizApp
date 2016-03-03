@@ -22,12 +22,20 @@ $(document).ready(function(){
 	];
 
 //VARIABLES
-	var firstQuestion = '<span class="question">'+questions[0].question+'</span><br><div id="idBox"><button class="next" type="button" value="null">'+'NEXT --->'+'</button></div>';
+	var firstQuestion = '<span class="question">'+questions[0].question+
+		'</span><br><div id="idBox"><button class="next" type="button" value="null">'+
+		'NEXT --->'+'</button></div>';
+		
 	var currentQuestion = 0;
 	
 	function printQuestion(index) {
 		var question = questions[index];
-		return '<span classs="question">'+question.question+'</span><br><div class="choices"><span><button class="answer" value="0">'+question.options[0]+'</button></span><br><span><button class="answer" value="1">'+question.options[1]+'</button></span><br><span><button class="answer" value="2">'+question.options[2]+'</button></span><br><span><button class="answer" value="3">'+question.options[3]+'</button></span><br></div>';
+		return '<span classs="question">'+
+			question.question+'</span><br><div class="choices"><span><button class="answer" value="0">'+
+			question.options[0]+'</button></span><br><span><button class="answer" value="1">'+
+			question.options[1]+'</button></span><br><span><button class="answer" value="2">'+
+			question.options[2]+'</button></span><br><span><button class="answer" value="3">'+
+			question.options[3]+'</button></span><br></div>';
 		};
 	
 	function nextQuestion() {
@@ -35,7 +43,8 @@ $(document).ready(function(){
 		if (currentQuestion < 6)
 			$('#quiz').empty().html(printQuestion(currentQuestion));
 		else if (currentQuestion == 6)
-			$('#quiz').empty().html('<span class="question">'+'Thanks for playing!'+'<br>'+'Click "next" to start over'+'</span><br>');
+			$('#quiz').empty().html('<span class="question">'+'Thanks for playing!'+'<br>'+
+				'Click "next" to start over'+'</span><br>');
 		else {
 			$('#quiz').html(firstQuestion)
 			currentQuestion = 0;
