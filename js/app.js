@@ -53,9 +53,9 @@ $(document).ready(function(){
 	
 	function getAnswer() {	
 		console.log('function working');
-		//var answer = $(this).value();
-		//nextQuestion();
-		/*if (answer == questions[currentQuestion].correct) {
+		/*var answer = $(this).attr('value');
+		nextQuestion();
+		if (answer == questions[currentQuestion].correct) {
 			console.log('correct');
 		} else {
 			console.log('incorrect');
