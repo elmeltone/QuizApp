@@ -52,26 +52,27 @@ $(document).ready(function(){
 		};
 	
 	function getAnswer() {	
-		var answer = $(this).attr('value');
-		if (answer == questions[currentQuestion].correct) {
+		console.log('function working');
+		//var answer = $(this).value();
+		//nextQuestion();
+		/*if (answer == questions[currentQuestion].correct) {
 			console.log('correct');
 		} else {
 			console.log('incorrect');
-		};
-		nextQuestion();
+		};*/
 		};
 	
 //START PAGE
 	$('#quiz').html(firstQuestion);
 	
 //EVENTS
-	$('.next').on('click',(function(){
+	$('.next').on('click', function(){
 		nextQuestion();
-		}));
+		});
 		
-	$('.answer').on('click',(function(){
+	$('.answer').on('click', function(){
 		getAnswer();
-		}));
+		});
 		
 		
 
