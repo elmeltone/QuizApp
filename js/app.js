@@ -54,19 +54,6 @@ $(document).ready(function(){
 			};
 		};
 	
-	function getAnswer() {	
-		console.log('function working');
-		var answer = $(this).attr('value');
-		if (answer == questions[currentQuestion].correct) {
-			console.log('correct');
-			$('#footer').append('<img class="icon" src="images/lamp.gif" alt="lamp">');
-		} else {
-			console.log('incorrect');
-			$('#footer').append('<img class="icon" src="images/no-goal.gif" alt="lamp">');
-		};
-		nextQuestion();
-		};
-	
 //START PAGE
 	$('#quiz').html(firstQuestion);
 	
@@ -76,7 +63,15 @@ $(document).ready(function(){
 		});
 		
 	$(document).on('click', '.answer', function(){
-		getAnswer();
+		var answer = $(this).attr('value');
+		if (answer == questions[currentQuestion].correct) {
+			console.log('correct');
+			$('#footer').append('<img class="icon" src="images/lamp.gif" alt="lamp">');
+		} else {
+			console.log('incorrect');
+			$('#footer').append('<img class="icon" src="images/no-goal.gif" alt="lamp">');
+		};
+		nextQuestion();
 		});
 		
 	$(document).on('click', '.startOver', function(){
