@@ -28,6 +28,8 @@ $(document).ready(function(){
 		
 	var currentQuestion = 0;
 	
+	//var scoreboard = document.getElementById('#footer');
+	
 	function printQuestion(index) {
 		var question = questions[index];
 		return '<span classs="question">'+
@@ -57,8 +59,10 @@ $(document).ready(function(){
 		var answer = $(this).attr('value');
 		if (answer == questions[currentQuestion].correct) {
 			console.log('correct');
+			$('#footer').append('<img class="icon" src="images/lamp.gif" alt="lamp">');
 		} else {
 			console.log('incorrect');
+			$('#footer').append('<img class="icon" src="images/no-goal.gif" alt="lamp">');
 		};
 		nextQuestion();
 		};
