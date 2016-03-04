@@ -45,8 +45,8 @@ $(document).ready(function(){
 		if (currentQuestion < 6)
 			$('#quiz').empty().html(printQuestion(currentQuestion));
 		else if (currentQuestion == 6)
-			$('#quiz').empty().html('<span class="question">'+'Thanks for playing!'+'<br>'+
-				'Click below to start over'+'</span><br><button class="startOver" type="button" value="null">'+
+			$('#quiz').empty().html('<span class="question"><br>'+'Thanks for playing!'+'<br>'+
+				'</span><br><button class="startOver" type="button" value="null">'+
 		'START OVER --->'+'</button>');
 		else {
 			$('#quiz').html(firstQuestion)
