@@ -82,7 +82,7 @@ $(document).ready(function(){
 	$(document).on('click', '.startOver', function(){
 		$('#quiz').empty().html(firstQuestion);
 		currentQuestion = 0;
-		$('#footer').empty().html('<p>Score:   </p>');
+		$('#footer').empty().html('<p>Score:</p>');
 		});
 
 
