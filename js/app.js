@@ -67,7 +67,7 @@ $(document).ready(function(){
 	$('#quiz').html(firstQuestion);
 	
 //EVENTS
-	$('.next').on('click', function(){
+	$(document).on('click', '.next', function(){
 		nextQuestion();
 		});
 		
@@ -77,6 +77,7 @@ $(document).ready(function(){
 		
 	$(document).on('click', '.startOver', function(){
 		$('#quiz').empty().html(firstQuestion);
+		currentQuestion = 0;
 		});
 
 
