@@ -23,8 +23,8 @@ $(document).ready(function(){
 
 //VARIABLES
 	var firstQuestion = '<span class="question">'+questions[0].question+
-		'</span><br><div id="idBox"><button class="next" type="button" value="null">'+
-		'NEXT --->'+'</button></div>';
+		'</span><br><div id="idBox"><button class="start" type="button" value="null">'+
+		'START'+'</button></div>';
 		
 	var currentQuestion = 0;
 	
@@ -47,7 +47,7 @@ $(document).ready(function(){
 		else if (currentQuestion == 6)
 			$('#quiz').empty().html('<span class="question"><br>'+'Thanks for playing!'+'<br>'+
 				'</span><br><button class="startOver" type="button" value="null">'+
-		'START OVER --->'+'</button>');
+		'START OVER'+'</button>');
 		else {
 			$('#quiz').html(firstQuestion)
 			currentQuestion = 0;
@@ -71,7 +71,7 @@ $(document).ready(function(){
 	$('#quiz').html(firstQuestion);
 	
 //EVENTS
-	$(document).on('click', '.next', function(){
+	$(document).on('click', '.start', function(){
 		nextQuestion();
 		});
 		
