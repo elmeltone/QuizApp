@@ -4,7 +4,7 @@ body {
 	background-position: center top;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	color: darkred;
+	color: midnightblue;
 	font-family: 'Graduate', cursive;
 	font-weight: bolder;
 	font-size: 30px;
@@ -109,7 +109,7 @@ input {
 }
 
 button {
-	background-color: darkred;
+	background-color: midnightblue;
 	color: white;
 	border: 0;
 	border-radius: 10px;
