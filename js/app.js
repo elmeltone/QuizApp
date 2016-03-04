@@ -44,7 +44,8 @@ $(document).ready(function(){
 			$('#quiz').empty().html(printQuestion(currentQuestion));
 		else if (currentQuestion == 6)
 			$('#quiz').empty().html('<span class="question">'+'Thanks for playing!'+'<br>'+
-				'Click "next" to start over'+'</span><br>');
+				'Click below to start over'+'</span><br><button class="startOver" type="button" value="null">'+
+		'START OVER --->'+'</button>');
 		else {
 			$('#quiz').html(firstQuestion)
 			currentQuestion = 0;
@@ -53,13 +54,13 @@ $(document).ready(function(){
 	
 	function getAnswer() {	
 		console.log('function working');
-		/*var answer = $(this).attr('value');
-		nextQuestion();
+		var answer = $(this).attr('value');
 		if (answer == questions[currentQuestion].correct) {
 			console.log('correct');
 		} else {
 			console.log('incorrect');
-		};*/
+		};
+		nextQuestion();
 		};
 	
 //START PAGE
@@ -70,11 +71,13 @@ $(document).ready(function(){
 		nextQuestion();
 		});
 		
-	$('.answer').on('click', function(){
+	$(document).on('click', '.answer', function(){
 		getAnswer();
 		});
 		
-		
+	$(document).on('click', '.startOver', function(){
+		$('#quiz').empty().html(firstQuestion);
+		});
 
 
 });
