@@ -68,7 +68,7 @@ $(document).ready(function(){
 		var answer = $(this).attr('value');
 		if (answer == questions[currentQuestion].correct) {
 			console.log('correct');
-			$('#footer').append('<img class="icon" src="http://i.imgur.com/qwvd4F4" alt="lamp">');
+			$('#footer').append('<img class="icon" src="http://i.imgur.com/qwvd4F4.gif" alt="lamp">');
 		} else {
 			console.log('incorrect');
 			$('#footer').append('<img class="icon" src="http://i.imgur.com/HUe53pP.gif" alt="lamp">');
