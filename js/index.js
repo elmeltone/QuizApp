@@ -1,6 +1,8 @@
+var $ = require('jquery');
+
 $(document).ready(function(){
 	console.log("ready");
-	
+
 //QUIZ QUESTIONS
 	var questions = [
 		{"question":"READY?"},
@@ -25,11 +27,11 @@ $(document).ready(function(){
 	var firstQuestion = '<span class="question">'+questions[0].question+
 		'</span><br><div id="idBox"><button class="start" type="button" value="null">'+
 		'START'+'</button></div>';
-		
+
 	var currentQuestion = 0;
-	
+
 	//var scoreboard = document.getElementById('#footer');
-	
+
 	function printQuestion(index) {
 		var question = questions[index];
 		return '<span classs="question">'+
@@ -39,7 +41,7 @@ $(document).ready(function(){
 			question.options[2]+'</button></span><br><span><button class="answer" value="3">'+
 			question.options[3]+'</button></span><br></div>';
 		};
-	
+
 	function nextQuestion() {
 		currentQuestion = currentQuestion + 1;
 		if (currentQuestion < 6)
@@ -53,27 +55,27 @@ $(document).ready(function(){
 			currentQuestion = 0;
 			};
 		};
-	
+
 //START PAGE
 	$('#quiz').html(firstQuestion);
-	
+
 //EVENTS
 	$(document).on('click', '.start', function(){
 		nextQuestion();
 		});
-		
+
 	$(document).on('click', '.answer', function(){
 		var answer = $(this).attr('value');
 		if (answer == questions[currentQuestion].correct) {
 			console.log('correct');
-			$('#footer').append('<img class="icon" src="images/lamp.gif" alt="lamp">');
+			$('#footer').append('<img class="icon" src="http://i.imgur.com/qwvd4F4" alt="lamp">');
 		} else {
 			console.log('incorrect');
-			$('#footer').append('<img class="icon" src="images/no-goal.gif" alt="lamp">');
+			$('#footer').append('<img class="icon" src="http://i.imgur.com/HUe53pP.gif" alt="lamp">');
 		};
 		nextQuestion();
 		});
-		
+
 	$(document).on('click', '.startOver', function(){
 		$('#quiz').empty().html(firstQuestion);
 		currentQuestion = 0;
