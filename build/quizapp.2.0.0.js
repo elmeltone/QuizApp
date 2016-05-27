@@ -48,7 +48,7 @@
 	
 	var $ = __webpack_require__(1);
 	
-	$(document).ready(function () {
+	$(function () {
 		console.log("ready");
 	
 		//QUIZ QUESTIONS
