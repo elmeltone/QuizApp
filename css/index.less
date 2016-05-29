@@ -5,7 +5,6 @@ body {
 	background-repeat: no-repeat;
 	color: midnightblue;
 	font-family: 'Raleway', sans-serif;
-	font-weight: 800;
 	font-size: 30px;
 	padding: 0;
 	margin: 0;
@@ -13,15 +12,14 @@ body {
 
 h1 {
 	margin: 5px;
+	font-weight: 800;
 	text-decoration: underline;
 }
 
 /*========== NAV BAR ==========*/
 
 nav {
-	background-image: url("http://i.imgur.com/usetx3r.png");
 	height: 20vh;
-	padding-top: 1vh;
 	text-align: center;
 }
 
@@ -29,27 +27,11 @@ nav {
 	width: 100%;
 	height: 20vh;
 	margin: 0;
-	padding: 0;
+	padding-top: 1vh 0;
 	position: absolute;
 }
 
-.masthead {
-	text-align: center;
-	float: left;
-	width: 25%;
-	margin: 0;
-	padding: 0;
-	font-size: 3rem;
-	overflow: none;
-	border: 1px;
-	border-color: red;
-}
-
 #title {
-	width: 50%;
-}
-
-#title-box {
 	margin: 1px;
 	padding: 0;
 	overflow: visible;
@@ -58,28 +40,9 @@ nav {
 #subtitle {
 	margin-top: 0;
 	font-family: 'PT Serif', serif;
-	font-size: 1.5rem;
-	text-decoration: none !important;
-}
-
-.celly {
-	height: 3em;
-	width: auto;
-	margin: 1px;
-	padding: 0;
-	display: inline-block;
-}
-
-#puckBox {
-	position: absolute;
-	width: 100%;
-	top: 19vh;
-	margin: 0;
-	padding: 0;
-}
-
-#puck {
-	height: 3vh;
+	font-size: 1.25rem;
+	text-decoration: none;
+	font-style: italic;
 }
 
 /*========== QUIZ SECTION ==========*/
@@ -90,13 +53,31 @@ input {
 
 #center {
 	text-align: center;
+	height: 60vh;
+}
+
+#center-opaque {
+	position: absolute;
+	top: 20vh;
+	height: 60vh;
+	width: 100%;
+	background-image: url("http://i.imgur.com/NXSNrkc.png");
+	background-size: cover;
+	opacity: .6;
+	z-index: -1;
 }
 
 #quiz {
-	width: 110%;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: white;
+	width: 80vw;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 1vw;
+	vertical-align: center;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+	}
 }
 
 .question {
@@ -105,6 +86,11 @@ input {
 	text-align: center;
 	margin-left: 25%;
 	margin-right: 25%;
+}
+
+#idBox {
+	width: 100%;
+	text-align: center;
 }
 
 button {
@@ -119,55 +105,42 @@ button {
 	font-size: 24px;
 	font-family: 'Lora', serif;
 	text-align: center;
-}
-
-#idBox {
-	width: 100%;
-	text-align: center;
-}
-
-button:hover {;
-  box-shadow: 2px 2px 2px #000;
-  cursor: pointer;
-  text-shadow: 2px 2px 2px #000;
-}
-
-button:focus {
-	outline: none;
+	&:hover {
+		box-shadow: 2px 2px 2px #000;
+  	cursor: pointer;
+  	text-shadow: 2px 2px 2px #000;
+	}
+	&:focus {
+		outline: none;
+	}
 }
 
 /*========== SCOREBOARD SECTION ==========*/
 
 #bottom {
-	float: bottom;
-	bottom: 0;
+	height: 20vh;
 	background-color: white;
 }
 
 #footer {
-	padding: 0.5em;
-	/*position: relative;
-	left: -50%;*/
-	/*margin: 1em auto 1em auto;*/
+	height: 100%;
+	padding: 1vh 1vw;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-}
-
-#footer ul {
+	p {
+		margin: 0 auto;
+	}
+	ul {
 	list-style-type: none;
 	width: 100%;
-	/*margin: 0 auto 0 auto;*/
 	padding: 0;
-	/*position: relative;
-	left: 50%;*/
+	}
 }
 
 #score {
 	text-align: center;
 	display: block;
-	margin-top: 1em;
-	/*margin-right: 1em;*/
 	padding-bottom: 5px;
 }
 
@@ -194,7 +167,7 @@ button:focus {
 /*========== RESPONSIVE ==========*/
 
 @media screen and (min-width: 716px) and (max-width: 1024px) {
-	nav {
+	/*nav {
 		height: 175px;
 	}
 	.masthead {
@@ -203,11 +176,11 @@ button:focus {
 	.celly {
 		height: 2.5em;
 		width: auto;
-	}
+	}*/
 }
 
 @media screen and (min-width: 440px) and (max-width: 715px) {
-	nav {
+	/*nav {
 		height: 105px;
 	}
 	.celly {
@@ -225,15 +198,18 @@ button:focus {
 	}
 	#footer {
 		font-size: 20px;
-	}
+	}*/
 }
 
-@media screen and (min-width: 1px) and (max-width: 439px) {
+/*@media screen and (min-width: 1px) and (max-width: 439px) {
 	nav {
 		height: 105px;
 	}
-	.masthead {
-		font-size: 20px;
+	#title {
+		font-size: 3vh;
+	}
+	#subtitle {
+		font-size: 1vh;
 	}
 	#quiz {
 		font-size: 24px;
@@ -242,8 +218,8 @@ button:focus {
 		font-size: 20px;
 	}
 	.celly {
-		height: 2em;
-		width: auto;
+		width: 100%;
+		height: auto;
 	}
 	#footer {
 		font-size: 20px;
@@ -252,3 +228,4 @@ button:focus {
 		max-height: 35px;
 	}
 }
+*/

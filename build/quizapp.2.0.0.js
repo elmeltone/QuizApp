@@ -82,6 +82,8 @@
 				$('#quiz').html(firstQuestion);
 				currentQuestion = 0;
 			};
+	
+			$('#quiz').scrollTop(0);
 		};
 	
 		//START PAGE
