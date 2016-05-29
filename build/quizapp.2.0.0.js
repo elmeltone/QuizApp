@@ -65,7 +65,7 @@
 			"correct": "2" }];
 	
 		//VARIABLES
-		var firstQuestion = '<span class="question">' + questions[0].question + '</span><br><div id="idBox"><button class="start" type="button" value="null">' + 'START' + '</button></div>';
+		var firstQuestion = '<br><span class="question">' + questions[0].question + '</span><br><br><div id="idBox"><button class="start" type="button" value="null">' + 'START' + '</button></div>';
 	
 		var currentQuestion = 0;
 	
@@ -73,12 +73,12 @@
 	
 		function printQuestion(index) {
 			var question = questions[index];
-			return '<span classs="question">' + question.question + '</span><br><div class="choices"><span><button class="answer" value="0">' + question.options[0] + '</button></span><br><span><button class="answer" value="1">' + question.options[1] + '</button></span><br><span><button class="answer" value="2">' + question.options[2] + '</button></span><br><span><button class="answer" value="3">' + question.options[3] + '</button></span><br></div>';
+			return '<br><span classs="question">' + question.question + '</span><br><div class="choices"><span><button class="answer" value="0">' + question.options[0] + '</button></span><br><span><button class="answer" value="1">' + question.options[1] + '</button></span><br><span><button class="answer" value="2">' + question.options[2] + '</button></span><br><span><button class="answer" value="3">' + question.options[3] + '</button></span><br></div><br>';
 		};
 	
 		function nextQuestion() {
 			currentQuestion = currentQuestion + 1;
-			if (currentQuestion < 6) $('#quiz').empty().html(printQuestion(currentQuestion));else if (currentQuestion == 6) $('#quiz').empty().html('<span class="question"><br>' + 'Thanks for playing!' + '<br>' + '</span><br><button class="startOver" type="button" value="null">' + 'START OVER' + '</button>');else {
+			if (currentQuestion < 6) $('#quiz').empty().html(printQuestion(currentQuestion));else if (currentQuestion == 6) $('#quiz').empty().html('<br><span class="question"><br>' + 'Thanks for playing!' + '<br>' + '</span><br><button class="startOver" type="button" value="null">' + 'START OVER' + '</button><br>');else {
 				$('#quiz').html(firstQuestion);
 				currentQuestion = 0;
 			};
