@@ -29,6 +29,7 @@ nav {
 	margin: 0;
 	padding: 1vh 0;
 	position: absolute;
+	z-index: 2;
 }
 
 #title {
@@ -68,6 +69,7 @@ input {
 }
 
 #quiz {
+	position: relative;
 	width: 80vw;
 	height: 100%;
 	margin: 0 auto;
@@ -77,16 +79,17 @@ input {
   &::-webkit-scrollbar {
     display: none;
 	}
+	z-index: 1;
 }
 
-.question {
+/*.question {
 	width: 80%;
 	max-width: 950px;
 	text-align: center;
 	margin-left: 25%;
 	margin-right: 25%;
   text-shadow: 0 0.25vh rgba(0,0,0,0.5);
-}
+}*/
 
 #idBox {
 	width: 100%;

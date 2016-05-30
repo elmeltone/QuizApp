@@ -49,22 +49,28 @@
 	//VARIABLES
 	var $ = __webpack_require__(1);
 	var questions = __webpack_require__(2);
+	
 	var firstQuestion = '<br><span class="question">' + questions[0].question + '</span><br><br><div id="idBox"><button class="start" type="button" value="null">' + 'START' + '</button></div>';
 	var currentQuestion = 0;
 	
 	//FUNCTIONS
 	function printQuestion(index) {
 		var question = questions[index];
-		return '<br><span classs="question">' + question.question + '</span><br><div class="choices"><span><button class="answer" value="0">' + question.options[0] + '</button></span><br><span><button class="answer" value="1">' + question.options[1] + '</button></span><br><span><button class="answer" value="2">' + question.options[2] + '</button></span><br><span><button class="answer" value="3">' + question.options[3] + '</button></span><br></div><br>';
+		return '<br><span class="question">' + question.question + '</span><br><div class="choices"><span><button class="answer" value="0">' + question.options[0] + '</button></span><br><span><button class="answer" value="1">' + question.options[1] + '</button></span><br><span><button class="answer" value="2">' + question.options[2] + '</button></span><br><span><button class="answer" value="3">' + question.options[3] + '</button></span><br></div><br>';
 	};
 	
 	function nextQuestion() {
 		currentQuestion = currentQuestion + 1;
-		if (currentQuestion < 6) $('#quiz').empty().html(printQuestion(currentQuestion));else if (currentQuestion == 6) $('#quiz').empty().html('<br><span class="question"><br>' + 'Thanks for playing!' + '<br>' + '</span><br><button class="startOver" type="button" value="null">' + 'START OVER' + '</button><br>');else {
-			$('#quiz').html(firstQuestion);
-			currentQuestion = 0;
+		if (currentQuestion < 6) $('#quiz').fadeOut(300, function () {
+			$('#quiz').empty().html(printQuestion(currentQuestion)).fadeIn(300);
+		});else if (currentQuestion == 6) $('#quiz').fadeOut(300, function () {
+			$('#quiz').empty().html('<br><span class="question"><br>' + 'Thanks for playing!' + '<br>' + '</span><br><button class="startOver" type="button" value="null">' + 'START OVER' + '</button><br>').fadeIn(300);
+		});else {
+			$('#quiz').fadeOut(300, function () {
+				$('#quiz').html(firstQuestion).fadeIn(300);
+				currentQuestion = 0;
+			});
 		};
-	
 		$('#quiz').scrollTop(0);
 	};
 	
@@ -74,7 +80,9 @@
 		$('#quiz').html(firstQuestion);
 	
 		$(document).on('click', '.start', function () {
-			nextQuestion();
+			$('#quiz').fadeOut(200, function () {
+				nextQuestion();
+			});
 		});
 	
 		$(document).on('click', '.answer', function () {
