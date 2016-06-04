@@ -16,7 +16,7 @@ var $ = require('jquery');
       "options":["New York City", "Toronto", "Montreal", "Ottawa"],
       "correct":"1"},
     {"question":"5. What is the penalty for fighting during a game in the NHL?",
-      "options":["None", "2 min in the penalty box", "At least 5 min in the penalty box", "Thrown out of game"],
+      "options":["None", "2 min in the penalty box", "At least 5 min in the box", "Thrown out of game"],
       "correct":"2"}
   ];
 
