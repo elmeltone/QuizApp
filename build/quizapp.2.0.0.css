@@ -1,11 +1,8 @@
 body {
-  background-size: cover;
-  background-position: center top;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  color: midnightblue;
+  background-color: #263188;
+  color: #203cc2;
   font-family: 'Raleway', sans-serif;
-  font-size: 30px;
+  font-size: 28px;
   padding: 0;
   margin: 0;
 }
@@ -23,9 +20,21 @@ nav {
   width: 100%;
   height: 20vh;
   margin: 0;
-  padding: 1vh 0;
+  padding: 0 0 1vh 0;
   position: absolute;
+  top: -1vh;
   z-index: 2;
+  background-color: #263188;
+  color: white;
+  overflow: hidden;
+}
+#titleContainer {
+  background-color: #203cc2;
+  height: 14vh;
+  width: 95%;
+  margin: 3vh 2.5% 3vh 2.5%;
+  padding: 1vh 0;
+  border-radius: 4px;
 }
 #title {
   margin: 1px;
@@ -35,9 +44,9 @@ nav {
 #subtitle {
   margin-top: 0;
   font-family: 'PT Serif', serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-decoration: none;
-  font-style: italic;
+  font-style: none;
 }
 /*========== QUIZ SECTION ==========*/
 input {
@@ -46,25 +55,27 @@ input {
 #center {
   text-align: center;
   height: 60vh;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
 }
 #center-opaque {
   position: absolute;
-  top: 20vh;
-  height: 60vh;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  top: 10vh;
+  left: 2.5%;
+  height: 80vh;
+  width: 95%;
   background-image: url("http://i.imgur.com/NXSNrkc.png");
   background-size: cover;
-  opacity: .6;
+  opacity: 1;
   z-index: -1;
-  border-radius: 60px;
 }
 #quiz {
   position: relative;
   width: auto;
   height: 100%;
   margin: 0 10vw;
+  border-radius: 12px;
   vertical-align: middle;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -81,7 +92,7 @@ input {
   text-align: center;
 }
 button {
-  background-color: #3359aa;
+  background-color: #203cc2;
   color: white;
   border: 0;
   border-radius: 10px;
@@ -107,15 +118,17 @@ button:focus {
 /*========== SCOREBOARD SECTION ==========*/
 #bottom {
   height: 20vh;
-  background-color: white;
+  background-color: #263188;
+  color: white;
 }
 #footer {
-  height: 100%;
-  padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  height: 20vh;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 0;
   text-align: center;
   font-size: 24px;
+  overflow: none;
 }
 #footer p {
   margin: 0 auto;
@@ -124,6 +137,12 @@ button:focus {
   list-style-type: none;
   width: 100%;
   padding: 0;
+}
+#scoreContainer {
+  background-color: #203cc2;
+  width: 95%;
+  height: 14vh;
+  margin: 2vh 2.5%;
 }
 #score {
   text-align: center;

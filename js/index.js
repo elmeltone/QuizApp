@@ -53,10 +53,10 @@ $(function(){
 		var answer = $(this).attr('value');
 		if (answer == questions[currentQuestion].correct) {
 			console.log('correct');
-			$('#footer').append('<img class="icon" src="http://i.imgur.com/qwvd4F4.gif" alt="lamp">');
+			$('#scoreContainer').append('<img class="icon" src="http://i.imgur.com/qwvd4F4.gif" alt="lamp">');
 		} else {
 			console.log('incorrect');
-			$('#footer').append('<img class="icon" src="http://i.imgur.com/HUe53pP.gif" alt="lamp">');
+			$('#scoreContainer').append('<img class="icon" src="http://i.imgur.com/HUe53pP.gif" alt="lamp">');
 		};
 		nextQuestion();
 		});
@@ -64,7 +64,7 @@ $(function(){
 	$(document).on('click', '.startOver', function(){
 		$('#quiz').empty().html(firstQuestion);
 		currentQuestion = 0;
-		$('#footer').empty().html('<p>Score:</p>');
+		$('#scoreContainer').empty().html('<p>Score:</p>');
 		});
 
 
