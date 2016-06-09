@@ -208,32 +208,17 @@ button:focus {
 		font-size: 20px;
 	}*/
 }
-/*@media screen and (min-width: 1px) and (max-width: 439px) {
-	nav {
-		height: 105px;
-	}
-	#title {
-		font-size: 3vh;
-	}
-	#subtitle {
-		font-size: 1vh;
-	}
-	#quiz {
-		font-size: 24px;
-	}
-	.choices button, #scoreboard {
-		font-size: 20px;
-	}
-	.celly {
-		width: 100%;
-		height: auto;
-	}
-	#footer {
-		font-size: 20px;
-	}
-	.icon {
-		max-height: 35px;
-	}
+@media screen and (min-width: 351px) {
+  #title {
+    font-size: 3rem;
+  }
+  #subtitle {
+    margin-top: 1vh;
+    font-size: 1.5rem;
+  }
+  #scoreContainer p,
+  .icon {
+    margin-top: 1vh;
+  }
 }
-*/
 /*# sourceMappingURL=quizapp.2.0.0.css.map */
