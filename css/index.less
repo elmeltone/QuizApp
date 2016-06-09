@@ -3,13 +3,16 @@
 @light: white;
 
 
-body {
-	background-color: @head;
-	color: @button;
-	font-family: 'Raleway', sans-serif;
-	font-size: 28px;
+html, body {
 	padding: 0;
 	margin: 0;
+}
+
+body {
+	background-color: @head;
+	color: @head;
+	font-family: 'Raleway', sans-serif;
+	font-size: 28px;
 }
 
 h1 {
@@ -23,28 +26,28 @@ h1 {
 nav {
 	height: 20vh;
 	text-align: center;
+	margin: 0;
+	padding: 0;
 }
 
 #top-div {
 	width: 100%;
 	height: 20vh;
 	margin: 0;
-	padding: 0 0 1vh 0;
-	position: absolute;
-	top: -1vh;
-	z-index: 2;
+	padding: 0;
 	background-color: @head;
 	color: @light;
-	overflow: hidden;
+	position: relative;
 }
 
 #titleContainer {
 	background-color: @button;
-	height: 14vh;
+	height: 16vh;
 	width: 95%;
-	margin: 3vh 2.5% 3vh 2.5%;
-	padding: 1vh 0;
+	margin: 2vh 2.5%;
+	padding: 0;
 	border-radius: 4px;
+	position: absolute;
 }
 
 #title {
@@ -83,8 +86,17 @@ input {
 	width: 95%;
 	background-image: url("http://i.imgur.com/NXSNrkc.png");
 	background-size: cover;
-	opacity: 1;
+	opacity: .6;
 	z-index: -1;
+}
+#center-white {
+	position: absolute;
+	top: 10vh;
+	left: 2.5%;
+	height: 80vh;
+	width: 95%;
+	background: white;
+	z-index: -2;
 }
 
 #quiz {
@@ -99,7 +111,6 @@ input {
   &::-webkit-scrollbar {
     display: none;
 	}
-	z-index: 1;
 }
 
 .question {
@@ -145,6 +156,7 @@ button {
 }
 
 #footer {
+	position: relative;
 	height: 20vh;
 	width: 100%;
 	margin: 0;
@@ -163,9 +175,10 @@ button {
 }
 
 #scoreContainer {
+	position: absolute;
 	background-color: @button;
 	width: 95%;
-	height: 14vh;
+	height: 16vh;
 	margin: 2vh 2.5%;
 }
 
@@ -187,12 +200,7 @@ button {
 }
 
 .icon {
-	max-height: 50px;
-}
-
-#sig {
-	width: 35px;
-	margin-top: 4em;
+	max-height: 40px;
 }
 
 /*========== RESPONSIVE ==========*/
