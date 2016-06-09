@@ -35,7 +35,7 @@ nav {
 	height: 20vh;
 	margin: 0;
 	padding: 0;
-	background-color: @light;
+	background-color: @button;
 	color: @light;
 	position: relative;
 }
@@ -60,19 +60,10 @@ nav {
 	position: absolute;
 }
 
-#title {
-	margin: 1px;
+.title {
+	line-height: 10vh;
+	vertical-align: middle;
 	padding: 0;
-	overflow: visible;
-	font-size: 28px;
-}
-
-#subtitle {
-	margin-top: 0;
-	font-family: 'PT Serif', serif;
-	font-size: 1rem;
-	text-decoration: none;
-	font-style: none;
 }
 
 /*========== QUIZ SECTION ==========*/
@@ -94,7 +85,7 @@ input {
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	background: @light;
+	background: @button;
 }
 
 #center-container {
@@ -161,9 +152,7 @@ button {
 	border-radius: 10px;
 	width: 85%;
 	height: 32px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 1em;
+	margin: 1em auto 0 auto;
 	font-size: 18px;
 	font-family: 'Lora', serif;
 	text-align: center;
@@ -183,7 +172,7 @@ button {
 
 #bottom {
 	height: 20vh;
-	background-color: @light;
+	background-color: @button;
 	color: @light;
 }
 
@@ -248,33 +237,47 @@ button {
 
 /*========== RESPONSIVE ==========*/
 
-@media screen and (min-width: 351px) {
-	#title {
-			font-size: 2.25rem;
-	}
-	#subtitle {
-		margin-top: 1vh;
-		font-size: 1rem;
+@media screen and (min-width: 355px) {
+	.title {
+		font-size: 2.85rem;
 	}
 	#scoreContainer p, .icon {
 		margin-top: 1vh;
 	}
 }
 
-@media screen and (min-width: 451px) {
-	#title {
-			font-size: 3.5rem;
+@media screen and (min-width: 411px) {
+	.title {
+		font-size: 3.25rem;
 	}
-	#subtitle {
-		margin-top: 0;
+	#quiz, .question {
+		font-size: 2.25rem;
+	}
+	button {
+		height: 3rem;
+	}
+	.start, .answer {
+		font-size: 1.25rem;
+	}
+}
+
+@media screen and (min-width: 501px) {
+	.icon {
+		max-height: 50px;
 	}
 }
 
 @media screen and (min-width: 751px) {
-	#title {
+	.title {
 			font-size: 4.5rem;
 	}
-	#subtitle {
-		font-size: 1.5rem;
+	#quiz, .question {
+		font-size: 3.5rem;
+	}
+	.start, .answer {
+		font-size: 2rem;
+	}
+	button {
+		width: 60%;
 	}
 }
