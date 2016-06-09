@@ -4,7 +4,7 @@ body {
   margin: 0;
 }
 body {
-  background-color: #263188;
+  background-color: white;
   color: #263188;
   font-family: 'Raleway', sans-serif;
   font-size: 28px;
@@ -26,15 +26,24 @@ nav {
   height: 20vh;
   margin: 0;
   padding: 0;
-  background-color: #263188;
+  background-color: white;
   color: white;
   position: relative;
 }
 #titleContainer {
-  background-color: #203cc2;
+  background-color: #263188;
   height: 16vh;
-  width: 95%;
-  margin: 2vh 2.5%;
+  width: 95vw;
+  margin: 2vh 2.5vw;
+  padding: 0;
+  border-radius: 4px;
+  position: absolute;
+}
+#innerTC {
+  background-color: #203cc2;
+  height: 12vh;
+  width: 90vw;
+  margin: 2vh 2.5vw;
   padding: 0;
   border-radius: 4px;
   position: absolute;
@@ -43,6 +52,7 @@ nav {
   margin: 1px;
   padding: 0;
   overflow: visible;
+  font-size: 10px;
 }
 #subtitle {
   margin-top: 0;
@@ -129,7 +139,7 @@ button:focus {
 /*========== SCOREBOARD SECTION ==========*/
 #bottom {
   height: 20vh;
-  background-color: #263188;
+  background-color: white;
   color: white;
 }
 #footer {
@@ -152,10 +162,20 @@ button:focus {
 }
 #scoreContainer {
   position: absolute;
-  background-color: #203cc2;
+  background-color: #263188;
   width: 95%;
   height: 16vh;
   margin: 2vh 2.5%;
+  border-radius: 4px;
+}
+#innerSC {
+  background-color: #203cc2;
+  height: 12vh;
+  width: 90vw;
+  margin: 2vh 2.5vw;
+  padding: 0;
+  border-radius: 4px;
+  position: absolute;
 }
 #score {
   text-align: center;
@@ -206,19 +226,19 @@ button:focus {
 	}
 	#footer {
 		font-size: 20px;
-	}*/
+	}
 }
+
 @media screen and (min-width: 351px) {
-  #title {
-    font-size: 3rem;
-  }
-  #subtitle {
-    margin-top: 1vh;
-    font-size: 1.5rem;
-  }
-  #scoreContainer p,
-  .icon {
-    margin-top: 1vh;
-  }
+	#title {
+			font-size: 3rem;
+	}
+	#subtitle {
+		margin-top: 1vh;
+		font-size: 1.5rem;
+	}
+	#scoreContainer p, .icon {
+		margin-top: 1vh;
+	}*/
 }
 /*# sourceMappingURL=quizapp.2.0.0.css.map */

@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-	background-color: @head;
+	background-color: @light;
 	color: @head;
 	font-family: 'Raleway', sans-serif;
 	font-size: 28px;
@@ -35,16 +35,26 @@ nav {
 	height: 20vh;
 	margin: 0;
 	padding: 0;
-	background-color: @head;
+	background-color: @light;
 	color: @light;
 	position: relative;
 }
 
 #titleContainer {
-	background-color: @button;
+	background-color: @head;
 	height: 16vh;
-	width: 95%;
-	margin: 2vh 2.5%;
+	width: 95vw;
+	margin: 2vh 2.5vw;
+	padding: 0;
+	border-radius: 4px;
+	position: absolute;
+}
+
+#innerTC {
+	background-color: @button;
+	height: 12vh;
+	width: 90vw;
+	margin: 2vh 2.5vw;
 	padding: 0;
 	border-radius: 4px;
 	position: absolute;
@@ -54,6 +64,7 @@ nav {
 	margin: 1px;
 	padding: 0;
 	overflow: visible;
+	font-size: 10px;
 }
 
 #subtitle {
@@ -151,7 +162,7 @@ button {
 
 #bottom {
 	height: 20vh;
-	background-color: @head;
+	background-color: @light;
 	color: @light;
 }
 
@@ -176,10 +187,21 @@ button {
 
 #scoreContainer {
 	position: absolute;
-	background-color: @button;
+	background-color: @head;
 	width: 95%;
 	height: 16vh;
 	margin: 2vh 2.5%;
+	border-radius: 4px;
+}
+
+#innerSC {
+	background-color: @button;
+	height: 12vh;
+	width: 90vw;
+	margin: 2vh 2.5vw;
+	padding: 0;
+	border-radius: 4px;
+	position: absolute;
 }
 
 #score {
@@ -237,7 +259,7 @@ button {
 	}
 	#footer {
 		font-size: 20px;
-	}*/
+	}
 }
 
 @media screen and (min-width: 351px) {
@@ -250,5 +272,5 @@ button {
 	}
 	#scoreContainer p, .icon {
 		margin-top: 1vh;
-	}
+	}*/
 }
