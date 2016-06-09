@@ -4,7 +4,7 @@ body {
   margin: 0;
 }
 body {
-  background-color: white;
+  background-color: #ffffff;
   color: #263188;
   font-family: 'Raleway', sans-serif;
   font-size: 28px;
@@ -27,7 +27,7 @@ nav {
   margin: 0;
   padding: 0;
   background-color: #203cc2;
-  color: white;
+  color: #ffffff;
   position: relative;
 }
 #titleContainer {
@@ -123,7 +123,7 @@ input {
 }
 button {
   background-color: #203cc2;
-  color: white;
+  color: #ffffff;
   border: 0;
   border-radius: 10px;
   width: 85%;
@@ -147,7 +147,7 @@ button:focus {
 #bottom {
   height: 20vh;
   background-color: #203cc2;
-  color: white;
+  color: #ffffff;
 }
 #footer {
   position: relative;
