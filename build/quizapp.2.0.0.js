@@ -89,10 +89,10 @@
 			var answer = $(this).attr('value');
 			if (answer == questions[currentQuestion].correct) {
 				console.log('correct');
-				$('#scoreContainer').append('<img class="icon" src="http://i.imgur.com/qwvd4F4.gif" alt="lamp">');
+				$('#innerSC').append('<img class="icon" src="http://i.imgur.com/qwvd4F4.gif" alt="lamp">');
 			} else {
 				console.log('incorrect');
-				$('#scoreContainer').append('<img class="icon" src="http://i.imgur.com/HUe53pP.gif" alt="lamp">');
+				$('#innerSC').append('<img class="icon" src="http://i.imgur.com/HUe53pP.gif" alt="lamp">');
 			};
 			nextQuestion();
 		});
@@ -100,7 +100,7 @@
 		$(document).on('click', '.startOver', function () {
 			$('#quiz').empty().html(firstQuestion);
 			currentQuestion = 0;
-			$('#scoreContainer').empty().html('<p>Score:</p>');
+			$('#innerSC').empty().html('<p>Score:</p>');
 		});
 	});
 
